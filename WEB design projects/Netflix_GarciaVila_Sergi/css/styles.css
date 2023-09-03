@@ -1,0 +1,465 @@
+:root{
+	
+	--blanco: #ffffff;
+	--blanco_roto:#dad9d9;
+	--grisf: #121212;
+	--primario: #FFC107;
+	--secundario:#0097A7;
+	--grisf: #141414;
+	--griss:#737373;
+	--verde:#5b9245;
+	--hoverGrey:#323232;
+
+}
+
+@font-face{
+
+	font-family:'Netflix';
+	src: url("/fonts/NetflixSansLight.otf")format('opentype'),
+	url("/fonts/NetflixSansLight.ttf")format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+html{
+    font-size: 62.5%;
+    background-color: var(--grisf);
+	font-family: 'Netflix', system-ui;	
+}
+
+/*////////////////////////CSS INDEX HTML////////////////////////////////*/
+
+.titulo{
+
+	color: var(--grisf);
+	font-size: 1px;
+}
+
+img{
+
+	max-width: 100%;
+ 	max-height: 100%;
+}
+
+.ContLogoIndex{
+
+	height: 15rem;
+	width: 15rem;
+	margin-left: 2rem;
+	margin-top: 2rem;	
+}
+
+.iconos{
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+	max-width: 130rem; 	
+	margin: 0 auto;
+	padding:2rem;		
+}
+
+.iconos a:hover{
+
+	display: flex;
+	background-color: var(--griss);
+	color: var(--grisf);
+	padding:38rem,8rem;	
+	box-shadow: 0rem 2rem 9rem var(--griss);
+}
+
+.navegacion-princ{
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;	
+	max-width: 115rem;;
+	margin: 0 auto;
+}
+
+.navegacion-princ a:hover{
+	
+	color: var(--griss);	
+}
+
+
+.navegacion-princ a{
+	
+	color: var(--blanco_roto);
+	text-decoration:none;
+	font-size:3rem;	
+}
+
+		
+.userSelect{
+	max-width: 90rem;
+	color: var(--blanco_roto);
+	font-size:4.5rem;
+	margin:0 auto;			
+}
+
+/*//////////////////////////CSS  CARTELERA.HTML///////////////////////////*/
+
+.Contheader{
+
+	height: 5rem;
+	width: 15rem;
+	margin-left: 6rem;
+	margin-top: 2rem;
+	margin-right: 5rem;
+}
+
+
+.contenedor-princ-h{
+	
+	display:inline-flex;	
+}
+
+
+.nav-opcions{
+
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 3rem;		
+}
+
+.nav-opcions a:hover{
+
+	
+	color: var(--griss);
+	cursor: pointer;
+}
+
+.nav-opcions a{
+	
+	color: var(--blanco_roto);
+	text-decoration:none;
+	font-size:1.9rem;	
+	margin-left: 3.5rem;;
+}
+
+.nav-opcions img{
+
+	max-width: 3rem;	
+}
+
+.nav-dreta{
+
+	display: flex;
+	margin-left: 42rem;		
+}
+
+
+
+.docus,.popularesp,.series{
+
+	color: var(--blanco_roto);
+	font-size:3rem;	
+	margin-left: 6rem;
+	margin-top: 5rem;6785
+}
+
+.navSegonCartel,.navPrimerCartel,.navTercerCartel{
+
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-left: 5rem;
+}
+
+
+.navPrimerCartel{
+
+	margin-left:7rem;	
+}
+
+
+.navTercerCartel{
+
+	margin-bottom:5rem;
+}
+
+
+
+.navPrimerCartel a:hover{
+
+	cursor: pointer;
+	box-shadow: 0rem 2rem 5rem var(--griss);
+}
+
+.navSegonCartel a:hover{
+
+	cursor: pointer;
+	box-shadow: 0rem 1rem 1rem var(--griss); 
+}
+
+.navTercerCartel a:hover{
+
+	cursor: pointer;
+	box-shadow: 0rem 1rem 1rem var(--griss);
+}
+
+
+/*//////////////////////////////CSS  SINOPSIS HTML///////////////////////*/
+
+.fondo_sinopsis{
+	display:block;
+	position:absolute;	
+}
+
+
+
+.fondo_sinopsis img{
+
+	filter: brightness(40%);
+	width: 100%;
+}
+
+
+.contenedorPrinc,.ImagenSinopsisSub{
+
+	display:block;
+	position: relative;
+	margin-left:20%;
+	width: 60%;
+	padding-top: 8rem;
+	
+}
+
+
+.contenedorPrinc img{
+
+	border-top-right-radius: 1.5rem ;
+	border-top-left-radius: 1.5rem;
+	width:100%;
+}
+
+ .ImagenSinopsisSub{
+	
+	padding-bottom: 10rem;
+	background-color: var(--grisf);
+	margin-top: -1rem;
+	height: 100rem;
+	overflow-y: auto;	
+}
+
+.elementosInline{
+
+	display:flex;
+}
+
+
+.porcentaje{
+
+	color: var(--verde);
+	font-size: 2rem;
+	margin:-7rem 0 0 5.5rem ;
+}
+
+.year,.tempo{
+	color: var(--blanco_roto);
+	font-size: 2rem;
+	margin: -7rem 0 0 2rem;
+}
+
+.age{
+	margin:-7rem 0 0 2rem;
+}
+
+
+.cuadroSinop1, .cuadroSinop2{
+
+	border-width: 0.3rem;
+	border-color: var(--blanco_roto);
+	border-style: solid;
+	border-radius: 0.5rem;
+	height: 2.2rem;
+	width: auto;	
+}
+
+.cuadroSinop1 p,.cuadroSinop2 p{
+
+	color: var(--blanco_roto);
+	font-size: 1.7rem;
+	text-align: center;
+	font-weight: bolder;
+	line-height: 8%;
+	margin-top:1rem;
+}
+
+.cuadroSinop1,.cuadroSinop2{
+
+	margin:-7rem 0 0 1rem ;
+}
+
+
+.grey{
+
+	color:var(--griss);
+	font-size: 1.7rem;
+	font-weight: normal;
+}
+
+.textFilmDet,.synopTittle, .textFilmSynop,.episodesTXT{
+
+	color:var(--blanco_roto);
+	font-size:1.7rem;
+	font-weight: bold;
+	
+}
+
+.rightBlock{
+
+	display:block;
+	position:relative;
+	margin:-60rem 0 30rem 72rem;
+}
+
+.synopTittle, .text, .episodesTXT{
+
+	font-size: 3rem;
+}
+
+.textFilmSynop{
+
+	margin-left: -55rem;
+	line-height: 2.8rem;
+}
+
+.pJump{
+
+	line-height:35rem;
+}
+
+.season{
+
+	font-weight:normal;
+	margin-left:53rem;
+	font-size:2.7rem;
+}
+
+
+
+.episodesCont1,.episodesCont2,.episodesCont3,.episodesCont4,.episodesCont5,.episodesCont6{
+
+	display:flex;
+	border-bottom-style: solid;
+	border-radius: 0.5rem;
+	border-width: 0.1rem;
+	border-color:var(--griss);	
+	margin:0rem 1rem 0 1rem;
+	width: auto;
+}
+
+.episodesCont1{
+
+	border-top-style: solid;
+}
+
+.episodesCont6{
+
+	margin-bottom: 10rem;
+}
+
+.episodesCont1:hover,.episodesCont2:hover,.episodesCont3:hover,.episodesCont4:hover,.episodesCont5:hover,.episodesCont6:hover{
+
+	background-color: var(--hoverGrey);
+	cursor: pointer;
+}
+
+
+.epi1{
+
+padding:2.5rem 0;
+}
+
+.numEpi{
+
+	color:var(--blanco_roto);
+	font-size: 2.7rem;
+	margin: 5.5rem 0 0 5rem;
+	padding-right:3rem;
+}
+
+.episodeTxtSinop, .minutes{
+
+	display: flex;
+	color: var(--blanco_roto);
+	font-size: 1.9rem;
+	font-weight: bold;
+	margin: 3rem 0 0 2rem;
+}
+
+.minutes{
+
+	margin: -0.6rem 0 0 39rem;
+}
+
+
+.sinopsTxt{
+
+	display:block;
+	position: relative;
+	color:var(--blanco_roto);
+	font-size: 1.7rem;
+	font-weight: normal;
+	margin:3rem 0 0 -54rem ;
+	line-height: 2.3rem;
+}
+
+
+
+
+
+
+
+/*//////////////////////////////Media Queries////////////////////////////*/
+
+
+@media(min-width:480px){
+
+	.navegacion-princ{
+	
+	flex-direction: row;
+	}
+
+	.navdiv{
+	flex-direction:row;
+	}
+
+
+}
+
+@media screen and (max-width:1080px){
+	
+
+	p{
+
+		font-size: 2px;
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
