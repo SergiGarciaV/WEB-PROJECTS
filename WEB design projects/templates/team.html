@@ -1,0 +1,378 @@
+﻿﻿<!DOCTYPE html>
+<html lang="Spanish">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SergisWeb-->Team</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">"
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/styleTeam.css">
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <span class="text-primary">Sergi's</span> ADVANCED CYBER SECURITY </a>
+      <!-- Bot  navegaci  desplegable -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+        arial-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarS">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="team.html" class="nav-link">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a href="servicios.html" class="nav-link">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a href="contacto.html" class="nav-link">Contacto</a>
+          </li>
+          <li class="nav-item">
+
+            <a href="#" class="nav-link" id="abrirModal">Acceder</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!--FI HEADER  -->
+
+<body>
+ <!-- Ventana modal, Acceso -->
+<div id="ventanaModal" class="modal">
+  <div class="contenido-modal">
+      <span class="cerrar">&times;</span>
+      <div class="textoSuperiorAcceso">
+          <h1 class="textoRetype accessText">Accede a 
+              <span class="txt-rotate" data-period="2000" data-rotate='[ "tu cuenta", "tu contenido"]'></span>
+          </h1>
+      </div>
+
+      <form id="accesoUsuario" class="bg-dark p-4 m-auto formulario-acceso">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="mb-3 accesoBar">
+                      <input class="userForm" id='usuario' name="usuario" type="text" placeholder="USUARIO">
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="mb-3 accesoBar">
+                      <input class="userForm" type="password" id='correo' name="correo" type="email" placeholder="PASSWORD">
+                  </div>
+              </div>
+          </div>
+          <button id="abrirModal" class="butAccessProp btn btn-primary btn-lg btn-block mt-3">Entrar</button>
+          <button id="abrirModalReg" class="butAccessProp butRegisProp btn btn-primary btn-lg btn-block mt-3">Registrarse</button>
+      </form>
+  </div>
+</div>
+
+<!-- Ventana modal, Registro -->
+<div id="ventanaModalReg" class="modalReg">
+  <div class="contenido-modalReg">
+      <span class="cerrar">&times;</span>
+      <div class="textoSuperiorAcceso">
+          <h1 class="textoRetype accessText">Registrate con   
+              <span class="txt-rotate" data-period="2000" data-rotate='[ " nombre", "apellidos", "e-mail", "Usuario", "Password"]'></span>
+          </h1>
+      </div>
+
+      <form id="accesoUsuarioReg" class="bg-dark p-4 m-auto formulario-acceso" method="POST" action="/registrar_usuario">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="mb-3 accesoBar">
+                      <input class="userForm" id='nombreRegistro' name="nombreRegistro" type="text" placeholder="Nombre">
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="mb-3 accesoBar">
+                      <input class="userForm" id='apellidos' name="apellidos" type="text" placeholder="Apellidos">
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="mb-3 accesoBar">
+                      <input class="userForm" id='email' name="email" type="text" placeholder="Email">
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="mb-3 accesoBar">
+                      <input class="userForm" id='usuarioRegistro' name="usuarioRegistro" type="text" placeholder="Usuario">
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="mb-3 accesoBar">
+                      <input class="userForm" type="password" id='contrasena' name="contrasena" placeholder="Contraseña">
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="mb-3 accesoBar">
+                      <input class="userForm" type="password" id='contrasenaB' name="contrasenaB" placeholder="Vuelva a introducir la contraseña">
+                  </div>
+              </div>
+          </div>
+          <button id="registrarBtn" type="submit" class="butAccessProp butRegisProp btn btn-primary btn-lg btn-block mt-3">Registrarse</button>
+      </form>
+  </div>
+</div>
+  <section class="contact sectionPaddingA">
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center text-white pb-5">
+            <h2 class="titular">Team</h2>
+            <div class="deco">
+              <img src="../static/img/deco1.svg" class="deco">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section-padding">
+    <div class="teamTextInicial">
+      <div class="container">
+        <div class="contPriv row bg-dark">
+          <div>
+            <h2 class="titularTeam">Pasión por la Seguridad</h2>
+            <p class="texto">Lorem ipsum dolor sit amet consectetur adipiscing elit egestas blandit nullam taciti,
+              venenatis curabitur cras dictum mi dui sagittis iaculis integer. Congue dapibus vehicula primis class
+              venenatis consequat eget urna, nibh varius pulvinar posuere hendrerit scelerisque sollicitudin a ultrices,
+              erat sed tellus nisi lacinia suspendisse potenti. Ac maecenas facilisi quis libero convallis aptent nisl,
+              auctor lacinia magnis enim mattis diam eget, potenti faucibus dictum nullam blandit at feugiat, pulvinar
+              id
+              lobortis ullamcorper metus molestie. Himenaeos nostra donec viverra torquent purus sapien pellentesque cum
+              dignissim aliquet, feugiat interdum nam nunc bibendum arcu semper ligula et proin, placerat tincidunt nibh
+              urna hendrerit fringilla volutpat sagittis vulputate. Et metus aliquam imperdiet sagittis vel iaculis
+              ornare
+              conubia massa, gravida vehicula proin dis morbi at pharetra cubilia rutrum, consequat mollis cursus
+              volutpat
+              hac velit donec luctus. Ligula ut pretium odio hendrerit facilisi ullamcorper pellentesque mauris
+              nascetur,
+              venenatis lobortis dui maecenas morbi curabitur cum cursus, elementum tincidunt ac aenean interdum commodo
+              proin mi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <img src="../static/img/line.svg" class="separador">
+  </div>
+  <section id="pen" class="about section-padding">
+    <div class="container">
+      <div class="row ">
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="about-img">
+            <img src="../static/img/teamA.png" class="img-fluid  imgIndexA">
+          </div>
+          <div class="letter-imageA">
+            <a href=contacto.html>
+              <div class="animated-mail">
+                <div class="back-fold"></div>
+                <div class="letter">
+                  <div class="letter-border"></div>
+                  <div class="letter-title"></div>
+                  <div class="letter-context"></div>
+                  <div class="letter-stamp">
+                    <div class="letter-stamp-inner"></div>
+                  </div>
+                </div>
+                <div class="top-fold"></div>
+                <div class="body"></div>
+                <div class="left-fold"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5 row bg-dark contParagB contPriv">
+          <div class="about-text text-white">
+
+            <h1 class="textoRetype">The Man with
+              <span class="txt-rotate" data-period="2000" data-rotate='[ "the keys", "access", "knowledge"]'></span>
+            </h1>
+            <p class='texto'> Lorem ipsum dolor sit amet consectetur adipiscing elit egestas blandit nullam taciti,
+              venenatis curabitur cras dictum mi dui sagittis iaculis integer. Congue dapibus vehicula primis class
+              venenatis consequat eget urna, nibh varius pulvinar posuere hendrerit scelerisque sollicitudin a ultrices,
+              erat sed tellus nisi lacinia suspendisse potenti. Ac maecenas facilisi quis libero convallis aptent nisl,
+              auctor lacinia magnis enim mattis diam eget, potenti faucibus dictum nullam blandit at feugiat, pulvinar
+              id lobortis ullamcorper metus molestie. Himenaeos nostra donec viverra torquent purus sapien pellentesque
+              cum dignissim aliquet, <br>
+              <br> Lorem ipsum dolor sit amet consectetur adipiscing elit egestas blandit nullam taciti, venenatis
+              curabitur cras dictum mi dui sagittis iaculis integer. Congue dapibus vehicula primis class venenatis
+              consequat eget urna, nibh varius pulvinar posuere hendrerit scelerisque sollicitudin a ultrices, erat sed
+              tellus nisi lacinia suspendisse potenti. Ac maecenas facilisi quis libero convallis aptent nisl, auctor
+              lacinia magnis enim mattis diam eget, potenti faucibus dictum nullam blandit at feugia
+            </p>
+            <a href="servicios.html#pent" class="btn btn-primary">Especialidad</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <img src="../static/img/line.svg" class="separador">
+  </div>
+  <section id="for" class="about section-padding">
+    <div class="container">
+
+      <div class="row ">
+
+
+
+        <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5 row bg-dark contParagB contPriv">
+
+          <div class="about-text text-white">
+            <img src="../static/img/lupa.png" class='lupa'>
+            <h1 class="textoRetype">The Woman of
+              <span class="txt-rotate" data-period="2000" data-rotate='[ "details", "no horizon", "full view"]'></span>
+            </h1>
+            <p class='texto'> Lorem ipsum dolor sit amet consectetur adipiscing elit egestas blandit nullam taciti,
+              venenatis curabitur cras dictum mi dui sagittis iaculis integer. Congue dapibus vehicula primis class
+              venenatis consequat eget urna, nibh varius pulvinar posuere hendrerit scelerisque sollicitudin a ultrices,
+              erat sed tellus nisi lacinia suspendisse potenti. Ac maecenas facilisi quis libero convallis aptent nisl,
+              auctor lacinia magnis enim mattis diam eget, potenti faucibus dictum nullam blandit at feugiat, pulvinar
+              id lobortis ullamcorper metus molestie. Himenaeos nostra donec viverra torquent purus sapien pellentesque
+              cum dignissim aliquet, <br>
+              <br> Lorem ipsum dolor sit amet consectetur adipiscing elit egestas blandit nullam taciti, venenatis
+              curabitur cras dictum mi dui sagittis iaculis integer. Congue dapibus vehicula primis class venenatis
+              consequat eget urna, nibh varius pulvinar posuere hendrerit scelerisque sollicitudin a ultrices, erat sed
+              tellus nisi lacinia suspendisse potenti. Ac maecenas facilisi quis libero convallis aptent nisl, auctor
+              lacinia magnis enim mattis diam eget, potenti faucibus dictum nullam blandit at feugia
+            </p>
+            <a href="servicios.html#analisis" class="btn btn-primary">Especialidad</a>
+
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="about-img">
+            <img src="../static/img/teamB.png" class="img-fluid  imgIndexB">
+          </div>
+          <div class="letter-imageB">
+            <a href=contacto.html>
+              <div class="animated-mail">
+                <div class="back-fold"></div>
+                <div class="letter">
+                  <div class="letter-border"></div>
+                  <div class="letter-title"></div>
+                  <div class="letter-context"></div>
+                  <div class="letter-stamp">
+                    <div class="letter-stamp-inner"></div>
+                  </div>
+                </div>
+                <div class="top-fold"></div>
+                <div class="body"></div>
+                <div class="left-fold"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <img src="../static/img/line.svg" class="separador">
+  </div>
+
+
+  <section id="edu" class="about section-padding">
+    <div class="container">
+      <div class="row ">
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="about-img">
+            <img src="../static/img/teamC.png" class="img-fluid  imgIndexC">
+          </div>
+          <div class="letter-imageC">
+            <a href=contacto.html>
+              <div class="animated-mail">
+                <div class="back-fold"></div>
+                <div class="letter">
+                  <div class="letter-border"></div>
+                  <div class="letter-title"></div>
+                  <div class="letter-context"></div>
+                  <div class="letter-stamp">
+                    <div class="letter-stamp-inner"></div>
+                  </div>
+                </div>
+                <div class="top-fold"></div>
+                <div class="body"></div>
+                <div class="left-fold"></div>
+              </div>
+          </div>
+          </a>
+        </div>
+        <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5 row bg-dark contParagB contPriv">
+          <div class="about-text text-white">
+            <img src="../static/img/books.png" class='books'>
+            <h1 class="textoRetype">The Law of
+              <span class="txt-rotate" data-period="2000"
+                data-rotate='[ "technologies", "the internet", "the network", "the Universe"]'></span>
+            </h1>
+            <p class='texto'> Lorem ipsum dolor sit amet consectetur adipiscing elit egestas blandit nullam taciti,
+              venenatis curabitur cras dictum mi dui sagittis iaculis integer. Congue dapibus vehicula primis class
+              venenatis consequat eget urna, nibh varius pulvinar posuere hendrerit scelerisque sollicitudin a ultrices,
+              erat sed tellus nisi lacinia suspendisse potenti. Ac maecenas facilisi quis libero convallis aptent nisl,
+              auctor lacinia magnis enim mattis diam eget, potenti faucibus dictum nullam blandit at feugiat, pulvinar
+              id lobortis ullamcorper metus molestie. Himenaeos nostra donec viverra torquent purus sapien pellentesque
+              cum dignissim aliquet, <br>
+              <br> Lorem ipsum dolor sit amet consectetur adipiscing elit egestas blandit nullam taciti, venenatis
+              curabitur cras dictum mi dui sagittis iaculis integer. Congue dapibus vehicula primis class venenatis
+              consequat eget urna, nibh varius pulvinar posuere hendrerit scelerisque sollicitudin a ultrices, erat sed
+              tellus nisi lacinia suspendisse potenti. Ac maecenas facilisi quis libero convallis aptent nisl, auctor
+              lacinia magnis enim mattis diam eget, potenti faucibus dictum nullam blandit at feugia
+            </p>
+            <a href="servicios.html#cursos" class="btn btn-primary">Especialidad</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="containerPriv dataPriv about section-padding">
+    <div>
+      <div class="contPriv row bg-dark">
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="about-img">
+            <img src="../static/img/secure.png" class="img-fluid rounded-circle">
+          </div>
+        </div>
+        <div class="botonesPriv col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+          <a href="#" class="botonFootA julius">PRIVACIDAD Y COOKIES</a>
+          <br>
+          <br>
+          <a href="#" class="botonFootB julius">PROTECCION DE DATOS</a>
+          <br>
+          <br>
+          <a href="contacto.html" class="botonFootC julius">CONTACTO</a>
+          <br>
+          <br>
+          <a href="#" class="botonFootD julius">AYUDA</a>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark p-2 text-center">
+    <div class="container">
+      <p class="text-white">Sergi's ACS Copyright 2023. sacs.com All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="../static/js/app.js"></script>
+</body>
+
+</html>

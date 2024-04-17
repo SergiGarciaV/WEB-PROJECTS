@@ -1,0 +1,233 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titular {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.818);
+  font-weight: 600;
+
+}
+
+.deco {
+  max-width: 220px;
+  margin: 0 auto;
+  margin-top: -1.5rem;
+
+}
+
+.teamTextInicial {
+
+  padding-top: 2rem;
+}
+
+
+
+
+.imgIndexA {
+
+
+  height: 110%;
+  width: auto;
+  padding-left: 10px;
+
+}
+
+.imgIndexB {
+
+  width: 100%;
+  height: auto;
+  padding-left: 70px;
+  padding-top: 40px
+}
+
+.imgIndexC {
+
+  height: 120%;
+  width: auto;
+  padding-right: 13%;
+  padding-top: 15%;
+
+}
+
+.miniMail {
+
+  margin-left: 31%;
+  width: 60px;
+
+}
+
+.miniMailB {
+
+  margin-left: 136%;
+  width: 60px;
+
+}
+
+.miniMailC {
+
+  margin-left: 36%;
+  width: 60px;
+
+}
+
+
+
+
+.lupa {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  margin-left: -7%;
+  margin-top: -6%;
+}
+
+.books {
+  position: absolute;
+  width: 17%;
+  height: auto;
+  margin-left: 40%;
+  margin-top: -10%;
+}
+
+
+
+@media(max-width: 768px) {}
+
+
+
+@media (max-width: 576px) {}
+
+.letter-imageA {
+  cursor: pointer;
+  margin-left: 28%;
+}
+
+.letter-imageB {
+  cursor: pointer;
+  margin-left: 49%;
+}
+
+.letter-imageC {
+  cursor: pointer;
+  margin-left: 33%;
+}
+
+.animated-mail {
+  position: relative;
+  height: 56.25px;
+  width: 75px;
+  transition: 0.4s;
+
+  .body {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 37.5px 75px;
+    border-color: transparent transparent #ffd700 transparent;
+    z-index: 2;
+  }
+
+  .top-fold {
+    position: absolute;
+    top: 18.75px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18.75px 37.5px 0 37.5px;
+    transform-origin: 50% 0%;
+    transition: transform 0.4s 0.2s, z-index 0.2s 0.2s;
+    border-color: #ffa500 transparent transparent transparent;
+    z-index: 2;
+  }
+
+  .back-fold {
+    position: absolute;
+    bottom: 0;
+    width: 75px;
+    height: 37.5px;
+    background: #ffa500;
+    z-index: 0;
+  }
+
+  .left-fold {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18.75px 0 18.75px 37.5px;
+    border-color: transparent transparent transparent #ffd700;
+    z-index: 2;
+  }
+
+  .letter {
+    left: 7.5px;
+    bottom: 0px;
+    position: absolute;
+    width: 60px;
+    height: 18.5px;
+    background: white;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.4s 0.1s;
+
+    .letter-border {
+      height: 3.75px;
+      width: 37.5%;
+      background: repeating-linear-gradient(-45deg, #ffd700, #ffd700 3px, transparent 3px, transparent 6.75px);
+    }
+
+    .letter-title {
+      margin-top: 3.75px;
+      margin-left: 1.875px;
+      height: 3.75px;
+      width: 15%;
+      background: #ffd700;
+    }
+
+    .letter-context {
+      margin-top: 3.75px;
+      margin-left: 1.875px;
+      height: 3.75px;
+      width: 7.5%;
+      background: #ffd700;
+    }
+
+    .letter-stamp {
+      margin-top: 11.25px;
+      margin-left: 45px;
+      border-radius: 100%;
+      height: 11.25px;
+      width: 11.25px;
+      background: #ffd700;
+      opacity: 0.3;
+    }
+  }
+}
+
+
+
+.letter-imageA:hover,
+.letter-imageB:hover,
+.letter-imageC:hover {
+  .animated-mail {
+    transform: translateY(18.75px);
+  }
+
+  .animated-mail .top-fold {
+    transition: transform 0.4s, z-index 0.2s;
+    transform: rotateX(180deg);
+    z-index: 0;
+  }
+
+  .animated-mail .letter {
+    height: 67.5px;
+  }
+
+  .shadow {
+    width: 93.75px;
+  }
+}
